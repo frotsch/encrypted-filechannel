@@ -9,21 +9,7 @@ plugins {
 
 repositories {
     mavenLocal()
-    maven {
-        url = uri('https://nexus.karakun.com/repository/maven-all/')
-    }
-
-    maven {
-        url = uri('https://nexus.karakun.com/repository/maven-releases/')
-    }
-
-    maven {
-        url = uri('https://nexus.karakun.com/repository/maven-snapshots/')
-    }
-
-    maven {
-        url = uri('https://nexus.karakun.com/repository/maven-public-releases/')
-    }
+    mavenCentral()
 }
 
 dependencies {
