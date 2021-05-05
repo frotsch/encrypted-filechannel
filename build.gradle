@@ -13,8 +13,8 @@ repositories {
 }
 
 dependencies {
-    implementation 'com.google.crypto.tink:tink:1.3.0'
-    testImplementation 'junit:junit:4.12'
+    implementation 'com.google.crypto.tink:tink:1.5.0'
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.7.1'
 }
 
 group = 'com.karakun'
@@ -24,6 +24,13 @@ sourceCompatibility = '1.8'
 
 java {
     withSourcesJar()
+}
+
+test {
+    useJUnitPlatform()
+    testLogging {
+        events "passed", "skipped", "failed"
+    }
 }
 
 publishing {
